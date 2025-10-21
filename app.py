@@ -43,7 +43,7 @@ class CartItem(db.Model):
 #Definindo função de autenticação
 @login_manager.user_loader
 def load_user(user_id): #Função que recebe o id do usuário
-    """Essa função existe pois toda vez que fizermos uma requisição em uma rota protegida, 
+    """Essa função existe, pois toda vez que fizermos uma requisição em uma rota protegida,
     o '@login_required' vai precisar recuperar o usuário que está acessando esta rota, e ele
     fará isso por meio desta função """
     return User.query.get(int(user_id)) #Retorna o usuário
